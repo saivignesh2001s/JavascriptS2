@@ -1,0 +1,30 @@
+<html>
+ <head>
+<script type="text/javascript">
+
+//Write JS code to zoom in & zoom out the images here
+function zoomIn(x) {
+  x.style.height = "350px";
+  x.style.width = "200px";
+}
+
+function zoomOut(x) {
+  x.style.height = "284px";
+  x.style.width = "178px";
+}
+
+</script>
+</head>
+ <body>
+     <div>
+<div>
+<img src="1.jpg"  width="284" height="178" border="0" alt="" 
+onmouseover="zoomIn(this)"
+onmouseout="zoomOut(this)">
+<img src="4.jpg" width="284" height="178" border="0" alt="" 
+onmouseover="zoomIn(this)"
+onmouseout="zoomOut(this)">
+</div>
+</div>
+</body>
+</html>

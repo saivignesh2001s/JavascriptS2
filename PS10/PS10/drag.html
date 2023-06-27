@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML List Binding -ES6 classes</title>
+</head>
+<body>
+    <h2>ES6 classes :HTML List Binding</h2>
+     <ul id="courseList">
+           <!-- To be filled by JS-->
+     </ul>
+<script  src="listbinding.js"> </script>     
+<script> 
+     const courseList=document.getElementById("courseList");
+     const listbinding=new ListBinding(courseList);
+     listbinding.add("Java");
+     listbinding.add("MicroService");
+     listbinding.add("Cloud Computing");
+     </script>
+</body>
+</html>

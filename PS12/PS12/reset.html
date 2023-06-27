@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDiv1{
+  background-color: #c5a5c5;
+  padding: 50px;
+}
+
+ .inside{
+  background-color: #d5d7e4; 
+  font-size: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<div id="myDiv1">
+  <h2>Click me!</h2>
+  <div id="myP1" class="inside">No, click me!</div>
+</div><br>
+<button type="button"
+onclick="reset()">
+Reset</button>
+
+<script>
+document.getElementById("myP1").addEventListener("click", function() {
+  document.getElementById("myP1").style.backgroundColor = "#FFB6C1";
+  document.getElementById("myDiv1").style.backgroundColor = "#dd4a98";
+  event.stopPropagation();
+}, false);
+
+document.getElementById("myDiv1").addEventListener("click", function() {
+  document.getElementById("myDiv1").style.backgroundColor = "#dd4a98";
+}, false);
+
+function reset(){
+document.getElementById("myDiv1").style.backgroundColor= "#c5a5c5";
+document.getElementById("myP1").style.backgroundColor = "#d5d7e4";
+
+}
+
+</script>
+
+</body>
+</html>
